@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaceable: 1
+  tower: {fileID: 1098382511029112108, guid: b4a90e2f79c1f402597e4435c54e49c4, type: 3}
 --- !u!65 &9162701828372803986
 BoxCollider:
   m_ObjectHideFlags: 0
