@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TileRoadStreight
       objectReference: {fileID: 0}
+    - target: {fileID: 3798504891207108849, guid: c5b1f69939d78461ab24aad8c2fdac6a, type: 3}
+      propertyPath: isPlaceable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8509661606666610027, guid: c5b1f69939d78461ab24aad8c2fdac6a, type: 3}
       propertyPath: m_Mesh
       value: 
