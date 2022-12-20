@@ -9,9 +9,25 @@ public class EnemyMover : MonoBehaviour
 
     void Start()
     {
-        print("Start here");
+        FindPath();
         StartCoroutine(FollowPath());
-        print("Finish here");
+    }
+
+    void FindPath()
+    {
+        path.Clear();
+        ReturnToStart();
+
+        GameObject parent = GameObject.FindGameObjectWithTag("Path");
+        foreach (Transform child in parent.transform)
+        {
+            path.Add(child.GetComponent<Waypoint>()); 
+        }
+    }
+
+    void ReturnToStart()
+    {
+        transform.position = path[0].transform.position;
     }
 
     IEnumerator FollowPath() 
@@ -32,5 +48,7 @@ public class EnemyMover : MonoBehaviour
                 yield return new WaitForEndOfFrame();
             }
         }
+
+        Destroy(gameObject);
     }
 }
