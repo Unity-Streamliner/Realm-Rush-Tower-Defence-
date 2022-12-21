@@ -1,36 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Enemy {
-    public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
+{
+    [SerializeField] int maxHitPoints = 5;
+    int currentHitPoints = 0;
+    void OnEnable()
     {
-        [SerializeField] int maxHitPoints = 5;
-        int currentHitPoints = 0;
-        void OnEnable()
-        {
-            currentHitPoints = maxHitPoints;
-        }
+        currentHitPoints = maxHitPoints;
+    }
 
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
-        void OnParticleCollision(GameObject other) 
-        {
-            print("dbg: " + currentHitPoints);
-            ProcessHit();
-        }
+    void OnParticleCollision(GameObject other) 
+    {
+        print("dbg: " + currentHitPoints);
+        ProcessHit();
+    }
 
-        void ProcessHit() 
+    void ProcessHit() 
+    {
+        currentHitPoints--;
+        if (currentHitPoints <= 0)
         {
-            currentHitPoints--;
-            if (currentHitPoints <= 0)
-            {
-                gameObject.SetActive(false);
-            }
+            gameObject.SetActive(false);
         }
     }
 }
