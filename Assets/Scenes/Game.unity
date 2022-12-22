@@ -2201,6 +2201,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4996134167080970647, guid: 9ba1501e2e5464b499414e7ebc7d060a, type: 3}
+      propertyPath: startingBalance
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 6514517180349471051, guid: 9ba1501e2e5464b499414e7ebc7d060a, type: 3}
       propertyPath: m_Name
       value: Bank
