@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 public class CoordinateLabeler : MonoBehaviour
 {
     [SerializeField] Color defaultColor = Color.white;
@@ -13,9 +14,22 @@ public class CoordinateLabeler : MonoBehaviour
     void Awake()
     {
         label = GetComponent<TextMeshPro>();
-        label.enabled = false;
         waypoint = GetComponentInParent<Waypoint>();
         DisplayCoordinates();
+    }
+
+    void Start()
+    {
+        if (Application.IsPlaying(gameObject))
+        {
+            // Play logic
+            label.enabled = false;
+        }
+        else
+        {
+            // Editor logic
+            label.enabled = true;
+        }
     }
 
     // Update is called once per frame
@@ -26,7 +40,7 @@ public class CoordinateLabeler : MonoBehaviour
             UpdateObjectName();
         }
 
-        ColorCoordinates();
+        SetLabelColor();
         ToggleLabels();
     }
 
@@ -38,7 +52,7 @@ public class CoordinateLabeler : MonoBehaviour
         }
     }
 
-    void ColorCoordinates() 
+    void SetLabelColor() 
     {
         if (waypoint.IsPlaceable) 
         {
