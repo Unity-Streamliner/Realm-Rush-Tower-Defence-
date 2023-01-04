@@ -37,7 +37,6 @@ public class TargetLocator : MonoBehaviour
     {
         weapon.LookAt(target);
         float targetDistance = Vector3.Distance(transform.position, target.position);
-        print($"dbg targetDistance = {targetDistance}");
         Attack(targetDistance <= range);
     }
 

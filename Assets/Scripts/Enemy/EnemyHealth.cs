@@ -28,7 +28,6 @@ public class EnemyHealth : MonoBehaviour
 
     void OnParticleCollision(GameObject other) 
     {
-        print("dbg: " + currentHitPoints);
         ProcessHit();
     }
 
