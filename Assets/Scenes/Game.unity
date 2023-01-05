@@ -5456,7 +5456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519885dc2319b42eb82da44a947683e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 3, y: 3}
+  gridSize: {x: 10, y: 10}
 --- !u!4 &968538580
 Transform:
   m_ObjectHideFlags: 0
@@ -6523,6 +6523,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 130982438416264968, guid: c5b1f69939d78461ab24aad8c2fdac6a, type: 3}
   m_PrefabInstance: {fileID: 1443193455}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1164492135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1436325471139586128, guid: bb9cbf83c092d424a815bc4ba67fd9c0, type: 3}
+  m_PrefabInstance: {fileID: 1436325471352272676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1164492136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164492135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90fb9284ff00d40caad860a36aee0549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSearchNode:
+    coordinates: {x: 2, y: 1}
+    isWalkable: 0
+    isExplored: 0
+    isPath: 0
 --- !u!4 &1166660888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 130982438416264968, guid: c5b1f69939d78461ab24aad8c2fdac6a, type: 3}
