@@ -42,6 +42,14 @@ public class GridManager : MonoBehaviour
         return coordinates;
     }
 
+    public Vector3 GetPositionFromCoordinates(Vector2Int coordinates)
+    {
+        Vector3 position = new Vector3();
+        position.x = coordinates.x * unityGridSize;
+        position.z = coordinates.y * unityGridSize;
+        return position;
+    }
+
     void CreateGrid()
     {
         for (int x = 0; x < gridSize.x; x++)

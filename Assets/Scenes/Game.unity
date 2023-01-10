@@ -6613,8 +6613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fb9284ff00d40caad860a36aee0549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCoordinates: {x: 0, y: 0}
-  destinationCoordinates: {x: 3, y: 2}
+  startCoordinates: {x: 4, y: 2}
+  destinationCoordinates: {x: 2, y: 0}
 --- !u!4 &1166660888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 130982438416264968, guid: c5b1f69939d78461ab24aad8c2fdac6a, type: 3}
