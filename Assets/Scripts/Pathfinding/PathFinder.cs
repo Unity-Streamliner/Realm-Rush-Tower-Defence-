@@ -28,8 +28,6 @@ public class PathFinder : MonoBehaviour
             grid = gridManager.Grid;
             startNode = grid[startCoordinates];
             destinationNode = grid[destinationCoordinates];
-            startNode.isWalkable = true;
-            destinationNode.isWalkable = true;
         }
     }
 
@@ -73,6 +71,9 @@ public class PathFinder : MonoBehaviour
 
     void BreadthFirstSearch()
     {
+        startNode.isWalkable = true;
+        destinationNode.isWalkable = true;
+
         frontier.Clear();
         reached.Clear();
         bool isRunning = true;
