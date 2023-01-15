@@ -37,6 +37,7 @@ public class Tile : MonoBehaviour
             if (isSuccessful)
             {
                 gridManager.BlocNode(coordinates);
+                pathFinder.NotifyReceivers();
             }
         }
     }

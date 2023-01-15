@@ -130,4 +130,9 @@ public class PathFinder : MonoBehaviour
         return false;
     }
 
+    public void NotifyReceivers()
+    {
+        BroadcastMessage("RecalculatePath", SendMessageOptions.DontRequireReceiver);
+    }
+
 }
