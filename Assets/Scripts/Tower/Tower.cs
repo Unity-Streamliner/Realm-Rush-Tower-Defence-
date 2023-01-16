@@ -17,4 +17,19 @@ public class Tower : MonoBehaviour
         } 
         return false;
     }
+
+    void Start()
+    {
+        StartCoroutine(Build());
+    }
+
+    IEnumerator Build()
+    {
+        foreach (Transform child in transform) 
+        {
+            child.gameObject.SetActive(true);
+            yield return new WaitForSeconds(1);
+        }
+        
+    }
 }
