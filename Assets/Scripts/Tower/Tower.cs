@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    [SerializeField] float buildDelay = 1f;
     [SerializeField] int buildTowerCost = 50;
     public bool createTower(Tower tower, Vector3 position)
     {
@@ -27,9 +28,22 @@ public class Tower : MonoBehaviour
     {
         foreach (Transform child in transform) 
         {
-            child.gameObject.SetActive(true);
-            yield return new WaitForSeconds(1);
+            // turn off all components
+            child.gameObject.SetActive(false);
+            foreach(Transform grandchild in child)
+            {
+                grandchild.gameObject.SetActive(false);
+            }
         }
-        
+        foreach (Transform child in transform) 
+        {
+            // turn off all components
+            child.gameObject.SetActive(true);
+            yield return new WaitForSeconds(buildDelay);
+            foreach(Transform grandchild in child)
+            {
+                grandchild.gameObject.SetActive(true);
+            }
+        }
     }
 }
